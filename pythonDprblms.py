@@ -1,109 +1,109 @@
 # 1. Reverse a string without slicing
-s = "hello"
-rev = ""
+s="hello"
+rev=""
 for char in s:
-    rev = char + rev
-print("Reversed string:", rev)
+    rev =char+rev
+print("Reversed string:",rev)
 
 # 2. Check if a string is a palindrome
-print("Is palindrome:", s == rev)
+print("Is palindrome:",s==rev)
 
 # 3. Count vowels and consonants in a string
-vowels = "aeiouAEIOU"
-v_count = c_count = 0
+vowels= "aeiouAEIOU"
+v_count=c_count = 0
 for char in s:
     if char.isalpha():
         if char in vowels:
-            v_count += 1
+            v_count+=1
         else:
-            c_count += 1
-print("Vowels:", v_count, "Consonants:", c_count)
+            c_count+=1
+print("Vowels:",v_count,"Consonants:",c_count)
 
 # 4. Remove duplicates from a string
-result = ""
+result=""
 for char in s:
     if char not in result:
-        result += char
-print("Without duplicates:", result)
+        result+=char
+print("Without duplicates:",result)
 
 # 5. Find the most frequent character
-freq = {}
+freq={}
 for char in s:
-    freq[char] = freq.get(char, 0) + 1
-most_freq = max(freq, key=freq.get)
-print("Most frequent character:", most_freq)
+    freq[char]=freq.get(char, 0) + 1
+most_freq=max(freq,key=freq.get)
+print("Most frequent character:",most_freq)
 
 # 6. Convert sentence to title case manually
-sentence = "hello world from python"
-title_case = ""
-words = sentence.split()
+sentence="hello world from python"
+title_case=""
+words=sentence.split()
 for word in words:
-    title_case += word[0].upper() + word[1:] + " "
-print("Title case:", title_case.strip())
+    title_case+=word[0].upper()+word[1:]+" "
+print("Title case:",title_case.strip())
 
 # 7. Check if two strings are anagrams
-s1 = "listen"
-s2 = "silent"
-print("Anagrams:", sorted(s1) == sorted(s2))
+s1="listen"
+s2="silent"
+print("Anagrams:",sorted(s1)==sorted(s2))
 
 # 8. Count words without split()
-sentence = "hello world from python"
-count = 1 if sentence else 0
+sentence="hello world from python"
+count=1 if sentence else 0
 for char in sentence:
-    if char == " ":
-        count += 1
-print("Word count:", count)
+    if char==" ":
+        count+= 1
+print("Word count:",count)
 
 # 9. Remove all spaces
-no_space = ""
+no_space=""
 for char in sentence:
-    if char != " ":
-        no_space += char
-print("Without spaces:", no_space)
+    if char!=" ":
+        no_space+=char
+print("Without spaces:",no_space)
 
 # 10. Replace all occurrences of a character
-s = "banana"
-s_new = ""
+s="banana"
+s_new=""
 for char in s:
-    if char == "a":
-        s_new += "o"
+    if char=="a":
+        s_new+="o"
     else:
-        s_new += char
-print("Replaced string:", s_new)
+        s_new+=char
+print("Replaced string:",s_new)
 
 # 11. Find first non-repeating character
-freq = {}
+freq={}
 for char in s:
-    freq[char] = freq.get(char, 0) + 1
-first_non_repeat = None
+    freq[char]=freq.get(char,0)+1
+first_non_repeat=None
 for char in s:
-    if freq[char] == 1:
-        first_non_repeat = char
+    if freq[char]==1:
+        first_non_repeat=char
         break
-print("First non-repeating character:", first_non_repeat)
+print("First non-repeating character:",first_non_repeat)
 
 # 12. Find longest word
-words = sentence.split()
-longest = max(words, key=len)
-print("Longest word:", longest)
+words=sentence.split()
+longest=max(words, key=len)
+print("Longest word:",longest)
 
 # 13. Check if string contains only digits
-s = "12345"
-print("Only digits:", s.isdigit())
+s="12345"
+print("Only digits:",s.isdigit())
 
 # 14. Reverse words in a sentence
-words = sentence.split()
-reversed_words = " ".join(words[::-1])
-print("Reversed words:", reversed_words)
+words=sentence.split()
+reversed_words= " ".join(words[::-1])
+print("Reversed words:",reversed_words)
 
 # 15. Implement atoi()
-s = "1234"
-num = 0
+s="1234"
+num=0
 for char in s:
-    num = num * 10 + (ord(char) - ord('0'))
+    num =num*10+(ord(char)-ord('0'))
 print("String to integer:", num)
 
-# ---------------- Numbers / Math ----------------
+# Numbers / Math 
 
 # 16. Check if a number is prime
 n = 29
@@ -377,3 +377,4 @@ for i in range(len(lst)):
         if lst[i] > lst[j]:
             lst[i], lst[j] = lst[j], lst[i]
 print("Sorted list:", lst)
+
